@@ -1,0 +1,11 @@
+{
+    "modelos": [{
+            "id": 1,
+            "nome": "Físico"
+        },
+        {
+            "id": 2,
+            "nome": "eBook"
+        }
+    ]
+}

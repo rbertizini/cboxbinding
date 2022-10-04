@@ -1,0 +1,33 @@
+{
+    "categorias": [{
+            "id": 11,
+            "idmodelo": 1,
+            "nome": "Ficção Científica"
+        },
+        {
+            "id": 12,
+            "idmodelo": 1,
+            "nome": "Fantasia"
+        },
+        {
+            "id": 13,
+            "idmodelo": 1,
+            "nome": "HQ"
+        },
+        {
+            "id": 14,
+            "idmodelo": 2,
+            "nome": "Ficção Científica"
+        },
+        {
+            "id": 15,
+            "idmodelo": 2,
+            "nome": "Fantasia"
+        },
+        {
+            "id": 16,
+            "idmodelo": 2,
+            "nome": "Horror"
+        }
+    ]
+}
