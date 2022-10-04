@@ -18,7 +18,7 @@
 
 ## cboxbinding
 
-Carga de dados usando json local
+Carga de dados usando json local - Fiori App
 
 ### Starting the generated app
 
