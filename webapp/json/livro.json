@@ -1,0 +1,99 @@
+{
+    "livros": [{
+            "id": 2011,
+            "idcategoria": 11,
+            "nome": "Trilogia da Fundação",
+            "autor": "Isaac Asimov",
+            "quantidade": 15,
+            "valor": 25.00
+        },
+        {
+            "id": 2012,
+            "idcategoria": 11,
+            "nome": "1984",
+            "autor": "Geroge Orwell",
+            "quantidade": 7,
+            "valor": 19.90
+        },
+        {
+            "id": 2021,
+            "idcategoria": 12,
+            "nome": "O Silmarillion",
+            "autor": "J. R. R. Tolkien",
+            "quantidade": 12,
+            "valor": 35.00
+        },
+        {
+            "id": 2022,
+            "idcategoria": 12,
+            "nome": "O Pequeno Principe",
+            "autor": "Antonie de Saint-Exupéry",
+            "quantidade": 27,
+            "valor": 11.95
+        },
+        {
+            "id": 2031,
+            "idcategoria": 13,
+            "nome": "Sandman",
+            "autor": "Neil Gaiman",
+            "quantidade": 5,
+            "valor": 125.00
+        },
+        {
+            "id": 2032,
+            "idcategoria": 13,
+            "nome": "Batman: A Piada Mortal",
+            "autor": "Allan Moore",
+            "quantidade": 4,
+            "valor": 75.00
+        },
+        {
+            "id": 2041,
+            "idcategoria": 14,
+            "nome": "O Guia do Mochileiro das Galáxias",
+            "autor": "Douglas Adams",
+            "quantidade": 42,
+            "valor": 42.00
+        },
+        {
+            "id": 2042,
+            "idcategoria": 14,
+            "nome": "Duna",
+            "autor": "Frank Herbert",
+            "quantidade": 29,
+            "valor": 59.00
+        },
+        {
+            "id": 2051,
+            "idcategoria": 15,
+            "nome": "OSenhor dos Anéis - Trilogia",
+            "autor": "J. R. R. Tolkien",
+            "quantidade": 50,
+            "valor": 55.00
+        },
+        {
+            "id": 2052,
+            "idcategoria": 15,
+            "nome": "Jogos Vorazes",
+            "autor": "Suzanne Collins",
+            "quantidade": 8,
+            "valor": 32.00
+        },
+        {
+            "id": 2061,
+            "idcategoria": 16,
+            "nome": "Medo Clássico",
+            "autor": "H. P. Lovecraft",
+            "quantidade": 9,
+            "valor": 32.00
+        },
+        {
+            "id": 2062,
+            "idcategoria": 16,
+            "nome": "Hellraiser - Renascido do Inferno",
+            "autor": "Clive Barker",
+            "quantidade": 3,
+            "valor": 6.66
+        }
+    ]
+}

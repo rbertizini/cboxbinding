@@ -1,27 +1,102 @@
 <mvc:View controllerName="cboxbinding.controller.CboxView"
-    xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" displayBlock="true"
+    xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form" displayBlock="true"
     xmlns="sap.m">
     <Page id="page" title="{i18n>title}">
         <content>
 
-			<ComboBox
-				id="cboxModelo"	
-				selectionChange="cboxCategData"				
-				items="{
-    					path: 'DataMod>/modelos',
-    					sorter: { path: 'nome' }
-    				}">
-				<core:Item key="{DataMod>id}" text="{DataMod>nome}" />
-			</ComboBox>
+			
+		<Panel width="auto" class="sapUiResponsiveMargin">
+			<headerToolbar>
+				<OverflowToolbar>
+					<Title text="{i18n>titlefiltros}"/>
+				</OverflowToolbar>
+			</headerToolbar>
+			<content>
 
-			<ComboBox
-                    id="cboxCategoria"
-    				items="{
-    					path: 'DataCat>/categorias',
-    					sorter: { path: 'nome' }
-    				}">
-    				<core:Item key="{DataCat>id}" text="{DataCat>nome}" />
-    		</ComboBox>
+				<f:SimpleForm 
+					id="form" 
+					editable="true"
+					layout="ColumnLayout"				
+					labelSpanXL="2"
+					labelSpanL="2"
+					labelSpanM="2"
+					labelSpanS="12"
+					adjustLabelSpan="false"
+					emptySpanXL="6"
+					emptySpanL="6"
+					emptySpanM="6"
+					emptySpanS="0"
+					columnsXL="1"
+					columnsL="1"
+					columnsM="1"
+					singleContainerFullSize="false" >
+					<f:content>
+						<Label text="{i18n>titlemodelo}" labelFor="cboxModelo"/>
+						<ComboBox
+							id="cboxModelo"	
+							selectionChange="cboxCategData"				
+							items="{
+									path: 'DataMod>/modelos',
+									sorter: { path: 'nome' }
+								}">
+							<core:Item key="{DataMod>id}" text="{DataMod>nome}" />
+						</ComboBox>
+
+						<Label text="{i18n>titlecategoria}" labelFor="cboxCategoria"/>
+						<ComboBox
+								id="cboxCategoria"
+								selectionChange="cboxLivrData"
+								items="{
+									path: 'DataCat>/categorias',
+									sorter: { path: 'nome' }
+								}">
+								<core:Item key="{DataCat>id}" text="{DataCat>nome}" />
+						</ComboBox>
+					</f:content>
+				</f:SimpleForm>
+			</content>
+		</Panel>
+
+
+		<List
+			id="LstLivros"
+			class="sapUiResponsiveMargin"
+			width="auto"						
+			items="{
+						path: 'DataLiv>/livros',
+						sorter:
+							{
+								path: 'Nnme',
+								group: false,
+								descending: false
+							}
+					}">			
+			<headerToolbar>
+				<Toolbar>
+					<Title text="{i18n>titlelivros}"/>
+				</Toolbar>
+			</headerToolbar>
+			<items>
+				<ObjectListItem
+					title="{DataLiv>nome} ({DataLiv>autor})"
+					number="{
+								parts: [{path: 'DataLiv>valor'},'BRL'],
+								type: 'sap.ui.model.type.Currency',
+								formatOptions: {
+									preserveDecimals : false,
+									currencyCode : true
+								}
+							}"
+							numberUnit="BRL"
+							numberState="{= ${DataLiv>valor} > 50 ? 'Error' : 'Success' }">
+					<firstStatus>
+						<ObjectStatus text="{ path: 'batata>quantidade' }"/>
+					</firstStatus>
+				</ObjectListItem>
+			</items>
+		</List>
+
+			
 
 		</content>
     </Page>

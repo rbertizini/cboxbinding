@@ -17,10 +17,13 @@ sap.ui.define([
 
                 var oCategoria = new JSONModel("");
                 this.getView().setModel(oCategoria, "DataCat");
+
+                var oLivro = new JSONModel("");
+                this.getView().setModel(oCategoria, "DataLiv");
             },
 
+            //Carga de categoria baseado no combobox de modelo
             cboxCategData: function(oEvent) {
-                alert(oEvent.getParameter("selectedItem").getKey());
                 var oCategoria = new JSONModel("json/categoria.json");
                 this.getView().setModel(oCategoria, "DataCat");
                 this.getView().byId("cboxCategoria").getBinding("items").filter([
@@ -29,6 +32,19 @@ sap.ui.define([
                         "EQ",
                         oEvent.getParameter("selectedItem").getKey())
                 ]);
-            }
+            },
+
+            //Carga de livros baseado no combobox de categoria
+            cboxLivrData: function(oEvent) {
+
+                var oLivro = new JSONModel("json/livro.json");
+                this.getView().setModel(oLivro, "DataLiv");
+                this.getView().byId("LstLivros").getBinding("items").filter([
+                    new sap.ui.model.Filter(
+                        "idcategoria",
+                        "EQ",
+                        oEvent.getParameter("selectedItem").getKey())
+                ]);
+            },
         });
     });
